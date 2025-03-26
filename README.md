@@ -1,7 +1,5 @@
 # Cat_and_Dog_Image_Classifier
 
-Cell 3 – Create Image Generators
-
 python
 Copy
 Edit
@@ -40,7 +38,6 @@ test_data_gen = test_image_generator.flow_from_directory(
     class_mode=None
 )
 
-Cell 5 – Data Augmentation for Training
 
 python
 Copy
@@ -55,9 +52,6 @@ train_image_generator = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode='nearest'
 )
-
-
-Cell 7 – Define the Model
 
 python
 Copy
@@ -81,9 +75,6 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-
-Cell 8 – Train the Model
-
 python
 Copy
 Edit
@@ -96,8 +87,6 @@ history = model.fit(
     validation_data=val_data_gen,
     validation_steps=val_data_gen.samples // BATCH_SIZE
 )
-
-Cell 10 – Make Predictions on Test Set
 
 python
 Copy
